@@ -1,0 +1,15 @@
+[mgr]
+show_hidden   = true
+scrolloff     = 12
+linemode      = "size"
+
+[opener]
+play = [
+    { run = 'mpv "$@"', orphan = true, for = "unix" },
+    { run = '"C:\Program Files\mpv.exe" %*', orphan = true, for = "windows" }
+]
+edit = [
+    { run = '${EDITOR:-nvim} "$@"', desc = "$EDITOR", block = true, for = "unix" },
+    { run = "%EDITOR% %*",  block = true, for = "windows" },
+]
+
