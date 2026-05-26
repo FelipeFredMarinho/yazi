@@ -12,4 +12,9 @@ edit = [
     { run = '${EDITOR:-nvim} "$@"', desc = "$EDITOR", block = true, for = "unix" },
     { run = "%EDITOR% %*",  block = true, for = "windows" },
 ]
+[open]
+prepend_rules = [
+	{ url = "*.toml", use = "edit" },
+	{ url = "*.md", use = "edit" },
+]
 
